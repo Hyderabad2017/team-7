@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="DOB"
+        android:text="Language"
         android:layout_above="@+id/editText3"
         android:layout_alignLeft="@+id/editText3"
         android:layout_alignStart="@+id/editText3"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Qualification"
+        android:text="Exam"
         android:layout_above="@+id/editText4"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="38dp" />
