@@ -115,8 +115,9 @@ session_start();
 							<li>
 								<a href="login" class="fh5co-sub-ddown">Login</a>
 								 <ul class="fh5co-sub-menu">
-								 	<li><a href="vollogin.php">As Student</a></li>
-								 	<li><a href="studLogin.php">As Scribe</a></li>
+								 	<li><a href="vollogin.php">As Scribe</a></li>
+								 	<li><a href="studLogin.php">As Student</a></li>
+								
 								</ul>
 							</li>
 							<li class="active"><a href="about.html">About</a></li>

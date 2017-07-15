@@ -1,6 +1,7 @@
 <html>
 <head>
         <title>Registration</title>
+		session_start();
 </head>
 <body bgcolor="FF5733">
 <?php 
@@ -17,6 +18,7 @@
 			if(mysql_fetch_array($res))
 			{
 				echo "<h1>Data inserted successfully</h1>";
+				$_session['user']=$username;
 				//header('Location:Updatevol.php');
 			}
 		}

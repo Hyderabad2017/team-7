@@ -14,6 +14,10 @@ session_start();
 			if(mysql_fetch_array($res))
 			{
 				echo "<center>You Have Logged In Successfully</center>";
+				$_SESSION['user']=$user;
+				echo $_SESSION['user'];
+				header('location:ScribeDashboard.php');
+				exit();
 				//add update page
 			}			
 		}		
