@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">IandEye</string>
     <string name="action_settings">Settings</string>
+<<<<<<< HEAD
     <string name="compose_email">Compose Email</string>
+=======
+    <string name="title_activity_main2">Main2Activity</string>
+>>>>>>> 6b63d129dd2677866bdacad0b3a0c71a1f6e4758
 </resources>
