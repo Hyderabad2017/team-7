@@ -1,8 +1,21 @@
 
+<<<<<<< HEAD
  <?php
 						session_start();
 						echo $_SESSION['user'];
+=======
+ <?php
+		session_start();
+		echo $_SESSION['user'];
+		include 'CodeToUpdateVolTable.php'
+?>
+
+<?php
+	session_start();
+	echo $_SESSION['user'];
+>>>>>>> 620991ef04d9d991f52e4d1aeb576953c61fc588
 						?>
+
 
 <!DOCTYPE html>
 <html>
@@ -30,8 +43,15 @@
 			$city=($_POST['city']);
 			$state=($_POST['state']);
 			$street=($_POST['street']);
-			$res=mysql_query("insert into scribe (username,email,contact,alternatecontact,dob,gender,qualification,city,state,street) values ('$name','$email','$contact','$altcontact','$dob','$gender','$qual','$city','$state','$street')");
 
+			$uname = ($_SESSION['user']);
+			$res=mysql_query("update scribe set email='$email',contact=$contact,alternatecontact=$altcont,dob=$dob,qualification='$qual',
+			gender='$gender',city='$city',street='$street',state='$state' where username='$uname';");
+			echo $res;
+			if(mysql_affected_rows($res))
+			{
+				echo "Updated Successfully";
+			}
 		}
 		mysql_close($con);
 
@@ -67,11 +87,15 @@
                   <!-- Modal content-->
                   <div class="modal-content">
                     <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">Request</button>
+
+                      <button type="button" name="btn" class="close" data-dismiss="modal">Reques&times;</button>
                       <button type="button" class="close" data-dismiss="modal">&times;</button>
                       <h4 class="modal-title">Modal Header</h4>
                     </div>
                     <div class="modal-body">
-                      <p>Some text in the modal.</p>
+                      <p><?php
+					  include(request.php)?></p>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-default">Ignore</button>
@@ -160,6 +184,7 @@
             </tr>
             <tr>
                 <td><button type="Submit" class="btn btn-primary" name="update">Submit</button></td>
+
             </tr>
                  </table>
             </form>

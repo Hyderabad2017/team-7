@@ -131,8 +131,11 @@
                  </table>
             </form>
         </center>
+<<<<<<< HEAD
 </body>
 </html>
+=======
+>>>>>>> 620991ef04d9d991f52e4d1aeb576953c61fc588
 
                 </div>
 							</div>
@@ -140,7 +143,7 @@
 				</div>
 				</form>
 		</div>
-	</div>  <!-- Row Ends here -->
+	</div>  
 </div>
 
 </body>
