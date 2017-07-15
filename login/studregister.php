@@ -4,6 +4,7 @@
 </head>
 <body bgcolor="FF5733">
 <?php 
+		session_start();
 		$con=mysql_connect("localhost","root","");
 		mysql_select_db('iandeye',$con);
 		if(isset($_POST['submit']))
@@ -17,6 +18,7 @@
 			if(mysql_fetch_array($res))
 			{
 				echo "<h1>Data inserted successfully</h1>";
+				$_session['user']=$user;
 				//header('Location:Updatevol.php');
 			}
 		}
