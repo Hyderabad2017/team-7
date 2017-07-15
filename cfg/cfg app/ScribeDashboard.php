@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 
  <?php  
 		session_start();
@@ -7,12 +5,11 @@
 		include 'CodeToUpdateVolTable.php'
 ?>
 
-=======
 <?php  
-						session_start();
-						echo $_SESSION['user'];
+	session_start();
+	echo $_SESSION['user'];
 						?>
->>>>>>> 9c9a4123e4986effea2bdb202be62d2329bbf0d6
+
 
 <!DOCTYPE html>
 <html>
@@ -83,14 +80,10 @@
                   <!-- Modal content-->
                   <div class="modal-content">
                     <div class="modal-header">
-<<<<<<< HEAD
                       <button type="button" class="close" data-dismiss="modal">Request</button>
 
                       <button type="button" name="btn" class="close" data-dismiss="modal">Reques&times;</button>
-
-=======
                       <button type="button" class="close" data-dismiss="modal">&times;</button>
->>>>>>> 9c9a4123e4986effea2bdb202be62d2329bbf0d6
                       <h4 class="modal-title">Modal Header</h4>
                     </div>
                     <div class="modal-body">
