@@ -23,10 +23,7 @@
             android:layout_height="wrap_content"
             android:text="Tutorials point "
             android:textColor="#ff87ff09"
-            android:textSize="30dp"
-            android:layout_above="@+id/imageButton"
-            android:layout_alignRight="@+id/imageButton"
-            android:layout_alignEnd="@+id/imageButton" />
+            android:textSize="30dp"/>
 
 
         <Button
@@ -34,7 +31,4 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/compose_email"/>
-
-
-
 </RelativeLayout>
