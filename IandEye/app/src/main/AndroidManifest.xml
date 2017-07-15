@@ -23,10 +23,14 @@
         </activity>
         <activity android:name=".update" />
         <activity android:name=".updatestu" />
+<<<<<<< HEAD
+        <activity android:name=".email"></activity>
+=======
         <activity
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+>>>>>>> 6b63d129dd2677866bdacad0b3a0c71a1f6e4758
     </application>
 
     <uses-permission android:name="android.permission.INTERNET"/>
