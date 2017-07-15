@@ -48,18 +48,18 @@
                       </div>
                   	<div class="form-group">
                         <label for="usr">Medium</label>
-                        <input type="text" class="form-control" id="usr">
+                        <input type="text" class="form-control" id="usr" name="med">
                       </div>
                   	<div class="form-group">
                         <label for="usr">Qualification</label>
-                        <input type="text" class="form-control" id="usr">
+                        <input type="text" class="form-control" id="usr" name="qual">
                       </div>
                   	<div class="form-group">
                         <label for="usr">Dateofexam</label>
-                        <input type="text" class="form-control" id="usr">
+                        <input type="text" class="form-control" id="usr" name="doe">
                       </div>
                   	<div class="form-group">
-                  	<button type="button" class="btn btn-primary">Request</button>
+                  	<button type="button" class="btn btn-primary" name="request">Request</button>
                   	</div>
 
                     </form>
