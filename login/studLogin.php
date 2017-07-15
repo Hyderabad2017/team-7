@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <?php 
 		$conn=mysql_connect("localhost","root","");
 		mysql_select_db("userlogin",$conn);
