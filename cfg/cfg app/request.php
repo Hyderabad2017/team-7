@@ -5,12 +5,9 @@
  {
     <?php
 	 $res1 = mysql_query("select * from requests where id=$id");
-		echo $result['examname'];
-		echo $row['doe'];
-		echo $row['medium'];
-	  echo "<table>
-	   <tr><td>
-	   </td></tr>"
+		echo $res1['examname'];
+		echo $res1['doe'];
+		echo $res1['medium'];
 	?>
  }
   </script>
