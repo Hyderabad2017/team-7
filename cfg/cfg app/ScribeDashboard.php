@@ -1,4 +1,18 @@
+<<<<<<< HEAD
 
+
+ <?php  
+		session_start();
+		echo $_SESSION['user'];
+		include 'CodeToUpdateVolTable.php'
+?>
+
+=======
+<?php  
+						session_start();
+						echo $_SESSION['user'];
+						?>
+>>>>>>> 9c9a4123e4986effea2bdb202be62d2329bbf0d6
 
 <!DOCTYPE html>
 <html>
@@ -10,6 +24,7 @@
   <script>
   function viewRequest() {}
 </script>
+
  <?php 
 		$con=mysql_connect("localhost","root","");
 		mysql_select_db('iandeye',$con);
@@ -25,8 +40,14 @@
 			$city=($_POST['city']);
 			$state=($_POST['state']);
 			$street=($_POST['street']);
-			$res=mysql_query("insert into scribe (username,email,contact,alternatecontact,dob,gender,qualification,city,state,street) values ('$name','$email','$contact','$altcontact','$dob','$gender','$qual','$city','$state','$street')");
-	
+			$uname = ($_SESSION['user']);
+			$res=mysql_query("update scribe set email='$email',contact=$contact,alternatecontact=$altcont,dob=$dob,qualification='$qual',
+			gender='$gender',city='$city',street='$street',state='$state' where username='$uname';");
+			echo $res;
+			if(mysql_affected_rows($res))
+			{
+				echo "Updated Successfully";
+			}
 		}
 		mysql_close($con);
 		
@@ -41,8 +62,10 @@
 					<div class="form-group">
 						<ul class="nav nav-tabs">
 							<li class="active"><a data-toggle="tab" href="#requestScribe">Request a Scribe</a></li>
-							<li><a data-toggle="tab" href="Updatevolu.php">Update profile</a></li>
+
+							<li><a data-toggle="tab" href="#updateProfile">Update profile</a></li>
 						</ul>
+					
 
 						<div class="tab-content">
 							<div id="requestScribe" class="tab-pane fade in active">
@@ -60,7 +83,14 @@
                   <!-- Modal content-->
                   <div class="modal-content">
                     <div class="modal-header">
-                      <button type="button" name="btn"class="close" data-dismiss="modal">&times;</button>
+<<<<<<< HEAD
+                      <button type="button" class="close" data-dismiss="modal">Request</button>
+
+                      <button type="button" name="btn" class="close" data-dismiss="modal">Reques&times;</button>
+
+=======
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+>>>>>>> 9c9a4123e4986effea2bdb202be62d2329bbf0d6
                       <h4 class="modal-title">Modal Header</h4>
                     </div>
                     <div class="modal-body">
@@ -78,11 +108,10 @@
 
 							<div id="updateProfile" class="tab-pane fade">
                 <div class="container">
-
                  <center>
 		<font size="5" color="green">You have not registered in our website.. please register your details..!</font><br/>
 		<h1><font color="yellow">Update Data</font></h1><br><br>
-            <form method="POST">
+            <form method="POST" name="update">
                  <table>
             <tr>
                 <td><font size="5"color="cyan">UserName:</td>
@@ -141,12 +170,13 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="Submit" value="Submit" name="update"></td>               
+                <td><input type="Submit" value="Submit"></td>               
             </tr>
                  </table>    
             </form>
         </center>				
 				  </div>
+                </div>
 							</div>
 						</div>
 				</div>
