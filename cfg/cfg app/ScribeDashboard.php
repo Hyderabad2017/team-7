@@ -18,6 +18,7 @@
  <?php 
 		$con=mysql_connect("localhost","root","");
 		mysql_select_db('iandeye',$con);
+		
 		if(isset($_POST['update']))
 		{
 			$name=($_POST['name']);
@@ -30,8 +31,12 @@
 			$city=($_POST['city']);
 			$state=($_POST['state']);
 			$street=($_POST['street']);
-			$res=mysql_query("insert into scribe (username,email,contact,alternatecontact,dob,gender,qualification,city,state,street) values ('$name','$email','$contact','$altcontact','$dob','$gender','$qual','$city','$state','$street')");
-	
+			$res=mysql_query("update table scribe email='$email',contact='$contact',alternatecontact='$altcont',dob='$dob',qualification='$qual',
+			gender='$gender',city='$city',street='$street',state='$state' where username='$_SESSION['user']'");
+			if(mysql_affected_rows($res))
+			{
+				echo "Updated Successfully";
+			}
 		}
 		mysql_close($con);
 		
