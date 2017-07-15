@@ -1,3 +1,140 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span> 
+		  </button>
+		  <a class="navbar-brand" href="#">QUETELET INDEX</a>
+		</div>  <!-- Nav bar header ends here -->
+	<div class="collapse navbar-collapse" id="myNavbar">
+      
+		<ul class="nav navbar-nav navbar-right">
+
+			<li class="Active"><a href="#"> Home</a></li>
+			<li><a href="#AboutBMI">About BMI</a></li>
+			<li><a href="#EatRight">Eat right</a></li>
+			<li><a href="#BePhysicallyActive">Be physically active</li>
+		</ul>
+      
+    </div> <!-- class collapse navbar-collapse  -->
+	</div> <!-- nav bar header ends here -->
+  </div>  <!-- class container-fluid ends here -->
+</nav>
+<Div id="#Home" name="Home" placeholder="Home">
+</Div>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+    <li data-target="#myCarousel" data-slide-to="4"></li>
+    <li data-target="#myCarousel" data-slide-to="5"></li>
+	<li data-target="#myCarousel" data-slide-to="6"></li>
+	<li data-target="#myCarousel" data-slide-to="7"></li>
+	<li data-target="#myCarousel" data-slide-to="8"></li>
+	<li data-target="#myCarousel" data-slide-to="9"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img  class="center-block" src="pic6.jpg" alt="bmi"  width="600" height="400">
+	  		
+    </div>
+
+    <div class="item">
+      <img  class="center-block" src="pic1.jpg" alt="food"  width="600" height="400">
+	  		
+
+    </div>
+
+    <div class="item">
+      <img  class="center-block" src="pic2.jpg" alt="heart" width="600" height="400">
+		
+	
+	</div>
+
+
+    <div class="item">
+      <img  class="center-block" src="pic3.jpg" alt="overweight" width="600" height="400">
+	  		
+
+    </div>
+    <div class="item">
+      <img class="center-block"  src="pic4.jpg" alt="normalweight" width="600" height="400">
+	  		
+
+    </div>
+    <div class="item">
+      <img class="center-block"  src="pic5.jpg" alt="obese" width="600" height="400">
+	  		
+
+    </div>
+	<div class="item">
+      <img class="center-block"  src="pic7.jpg" alt="obese" width="600" height="400">
+	  		
+
+    </div>
+	<div class="item">
+      <img class="center-block"  src="pic8.jpg" alt="obese" width="600" height="400">
+	  		
+
+    </div>
+	<div class="item">
+      <img class="center-block"  src="pic9.jpg" alt="obese" width="600" height="400">
+	  		
+
+    </div>
+	<div class="item">
+      <img class="center-block"  src="pic10.jpg" alt="obese" width="600" height="400">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>  <!-- My carousel Ends here -->
+
+
+<div class="container">
+	<div class="well well-lg">
+		<h4 id="AboutBMI">About BMI<h4>
+		<h5><p>BMI is used as a screening tool to indicate whether a person is underweight, overweight, obese or a healthy weight for their height.
+		<br>
+
+		If a person's BMI is out of the healthy BMI range, their health risks may increase significantly.
+		<br>
+
+		BMI values are age-independent and the same for both sexes. However, BMI may not correspond to the same degree of fatness in different populations due to different body proportions.</p>
+
+		<p>The health risks associated with an increasing BMI are continuous, and the interpretation of BMI grading in relation to risk may differ for different populations.<br>
+
+			Use our BMI calculator to access your's <br> </h5>
+
+	</div>
+</div>
+
 <div class="container">
 	<div class="row">
 		<div class="col-sm-6">
@@ -38,3 +175,238 @@
 							</div>							
 
 						</div>
+						<div>
+							<h5>
+								<input type="button" value="Calculate BMI" onClick="calculateBmi()"><br /><br />
+								Your BMI: <input type="text" name="bmi" style="width:70px;"><br><br>
+								This Means: <input type="text" name="meaning" size="25"><br><br>
+								<input type="reset" value="Reset" />
+							</h5>
+						</div>
+				</div>
+				</form>
+		</div>
+
+		<div class="container">
+			<div class="col-sm-6">
+					<h4> Suggested Measures </h4>
+							<ul class="nav nav-tab">
+								<li><a data-toggle="tab" href="#Underweight">Underweight</a></li>
+								<li><a data-toggle="tab" href="#Normalweight">Normalweight</a></li>
+								<li><a data-toggle="tab" href="#Overweight">Overweight</a></li>
+								<li><a data-toggle="tab" href="#Obese">Obese</a></li>
+							</ul>
+							<div class="tab-content">
+								<div id="Underweight" class="tab-pane fade">
+									<h4>Problems due to UnderWeight</h4>
+									<p><strong>Underweight</strong> is a term describing a person whose body weight is considered too low to be healthy. The definition usually refers to people with a body mass index (BMI) of under 18.5 or a weight 15% to 20% below that normal for their age and height group.</p>
+									<h4>Causes</h4>
+									<p>A person may be underweight due to genetics,metabolism, lack of food (frequently due to poverty), or illness.
+
+									Being underweight is associated with certain medical conditions, including hyperthyroidism,cancer, or tuberculosis. People with gastrointestinal or liver problems may be unable to absorb nutrients adequately. People with certain eating disorders can also be underweight due to lack of nutrients/over exercise.
+									<h4>Problems</h4>
+									Underweight might be secondary to or symptomatic of an underlying disease. Unexplained weight loss may require professional medical diagnosis.
+
+									Underweight can also be a primary causative condition. Severely underweight individuals may have poor physical stamina and a weak immune system, leaving them open to infection.Underweight status ... and micronutrient deficiencies also cause decreases in immune and non-immune host defenses, and should be classified as underlying causes of death if followed by infectious diseases that are the terminal associated causes.People who are malnutrative underweight raise special concerns, as not only gross caloric intake may be inadequate, but also intake and absorption of other vital nutrients, especially essential amino acids and micro-nutrients such as vitamins and minerals.
+
+									In women, being grossly underweight can result in amenorrhea (absence of menstruation), infertility and possible complications during pregnancy. It can also cause anemia and hair loss.
+
+									Being underweight is an established risk factor for osteoporosis, even for young people. This is a particularly insidious consequence, because the affected persons do not notice the danger. After the occurrence of first spontaneous fractures the damage is often already irreversible.
+
+									Although being underweight has been reported to increase mortality at rates comparable to that seen in morbidly obese people,the effect is much less drastic when restricted to non-smokers with no history of disease, suggesting that smoking and disease-related weight loss are the leading causes of the observed effect.
+									<h4>Treatment</h4>
+									<ul>
+									<li><h5>Diet</h5></li>
+									Underweight individual may be advised to gain weight by increasing calorie intake. This can be done by eating calorie-dense foods, such as dried fruits, cheese, and nuts. Body weight may also be increased through the consumption of liquid nutritional supplements.Other nutritional supplements may be recommended for individuals with insufficient vitamin or mineral intake.
+									<li><h5>Exercise</h5></li>
+									Another way for underweight people to gain weight is by exercising. Muscle hypertrophy increases body mass. Weight lifting exercises are effective in helping to improve muscle tone as well as helping with weight gain. Weight lifting has also been shown to improve bone mineral density, for which underweight people have an increased risk of deficiency.
+
+									Exercise itself is catabolic, which results in a brief reduction in mass. The gain in weight that can result of it comes from the anabolic overcompensation when the body recovers and overcompensates via muscle hypertrophy. This can happen by an increase in the muscle proteins, or through enhanced storage of glycogen in muscles. Exercise can help stimulate a person's appetite if they are not inclined to eat</p>
+
+									</p>
+									</h5>
+								</div>  
+
+							<!-- <div class="tab-content"> -->
+								<div id="Normalweight" class="tab-pane fade">
+									<p>You are absolutely fine.  Make sure that you do not put up weight over a period of time.</p>
+								</div>  
+<!-- 							</div> -->
+
+								
+							<!-- <div class="tab-content"> -->
+								<div id="Overweight" class="tab-pane fade">
+
+									<h3>Problems for OverWeight<h3>
+
+									<h4>OverWeight</h4>
+									<p>Overweight is having more body fat than is optimally healthy. Being overweight is common especially where food supplies are plentiful and lifestyles are sedentary.
+									A healthy body requires a minimum amount of fat for proper functioning of the hormonal, reproductive, and immune systems, as thermal insulation, as shock absorption for sensitive areas, and as energy for future use. But the accumulation of too much storage fat can impair movement, flexibility, and alter appearance of the body.
+									<h4>Causes</h4>
+									Being overweight is generally caused by the intake of more calories (by eating) than are expended by the body (by exercise and everyday living). Factors that may contribute to this imbalance include:
+									<ul>
+									<li>Alcoholism</li>
+									<li>Eating disorders (such as binge eating)</li>
+									<li>Genetic predisposition</li>
+									<li>Hormonal imbalances (e.g. hypothyroidism)</li>
+									<li>Insufficient or poor-quality sleep</li>
+									<li>Limited physical exercise and sedentary lifestyle</li>
+									<li>Poor nutrition</li>
+									<li>Metabolic disorders, which could be caused by repeated attempts to lose weight by weight cycling</li>
+									<li>Overeating</li>
+									<li>Psychotropic medication (e.g. olanzapine)</li>
+									<li>Smoking cessation and other stimulant withdrawal</li>
+									<li>Stress</li>
+									</ul>
+									<h4>Treatment</h4>
+									The usual treatments for overweight individuals is diet and physical exercise.
+									Dietitians generally recommend eating several balanced meals dispersed through the day, with a combination of progressive, primarily aerobic, physical exercise.
+									Because these general treatments help most case of obesity, they are common in all levels of overweight individuals.
+									<ul>
+									<li><h5>Diet</h5></li>
+									Dietary habits are the habitual decisions an individual or culture makes when choosing what foods to eat. The word diet often implies the use of specific intake of nutrition for health or weight-management reasons (with the two often being related). Although humans are omnivores, each culture and each person holds some food preferences or some food taboos. This may be due to personal tastes or ethical reasons. Individual dietary choices may be more or less healthy.
+
+									Complete nutrition requires ingestion and absorption of vitamins, minerals, and food energy in the form of carbohydrates, proteins, and fats. Dietary habits and choices play a significant role in the quality of life, health and longevity.
+									<li><h5>Physical Exercise</h5></li>
+									Physical exercise is any bodily activity that enhances or maintains physical fitness and overall health and wellness. It is performed for various reasons, including strengthening muscles and the cardiovascular system, honing athletic skills, weight loss or maintenance, and merely enjoyment. Frequent and regular physical exercise boosts the immune system and helps prevent the "diseases of affluence" such as heart disease, cardiovascular disease, Type 2 diabetes, and obesity. It may also help prevent stress and depression, help to promote or maintain positive self-esteem, improve mental health generally, and can augment an individual's sex appeal or body image, which has been found to be linked with higher levels of self-esteem. Childhood obesity is a growing global concern, and physical exercise may help decrease some of the effects of childhood and adult obesity. Some care providers call exercise the "miracle" or "wonder" drug—alluding to the wide variety of benefits that it can provide for many individuals.
+									</ul>
+									</p>
+								</div>  
+							<!-- </div>	 -->
+
+							<!-- <div class="tab-content"> -->
+								<div id="Obese" class="tab-pane fade">
+
+									<h4>Problems for Obese</h4>
+									<p>Obesity is a medical condition in which excess body fat has accumulated to the extent that it may have a negative effect on health.People are generally considered obese when their body mass index (BMI), a measurement obtained by dividing a person's weight by the square of the person's height, is over 30 kg/m2, with the range 25–30 kg/m2 defined as overweight.Some East Asian countries use lower values. Obesity increases the likelihood of various diseases, particularly heart disease, type 2 diabetes, obstructive sleep apnea, certain types of cancer, and osteoarthritis.
+
+									Obesity is most commonly caused by a combination of excessive food intake, lack of physical activity, and genetic susceptibility. A few cases are caused primarily by genes, endocrine disorders, medications, or mental illness.Evidence to support the view that obese people eat little yet gain weight due to a slow metabolism is not generally supported. On average, obese people have a greater energy expenditure than their thin counterparts due to the energy required to maintain an increased body mass.
+									<h4>Causes</h4>
+									At an individual level, a combination of excessive food energy intake and a lack of physical activity is thought to explain most cases of obesity. A limited number of cases are due primarily to genetics, medical reasons, or psychiatric illness. In contrast, increasing rates of obesity at a societal level are felt to be due to an easily accessible and palatable diet, increased reliance on cars, and mechanized manufacturing.
+
+									A 2006 review identified ten other possible contributors to the recent increase of obesity: insufficient sleep, endocrine disruptors (environmental pollutants that interfere with lipid metabolism), decreased variability in ambient temperature,  decreased rates of smoking, because smoking suppresses appetite,  increased use of medications that can cause weight gain (e.g., atypical antipsychotics),  proportional increases in ethnic and age groups that tend to be heavier,  pregnancy at a later age (which may cause susceptibility to obesity in children), epigenetic risk factors passed on generationally, natural selection for higher BMI, assortative mating leading to increased concentration of obesity risk factors (this would increase the number of obese people by increasing population variance in weight).While there is substantial evidence supporting the influence of these mechanisms on the increased prevalence of obesity, the evidence is still inconclusive, and the authors state that these are probably less influential than the ones discussed in the previous paragraph.
+									<h4>Diet</h4>
+									Maintain heathly diet to overcome serious problems.consult doctor as soon as possible.
+									</p>
+
+
+								</div>  
+							<!-- </div> -->
+
+				</div>						
+			</div>   <!-- Column 2 Ends here -->
+		</div> <!-- Container ends here -->
+	</div>  <!-- Row Ends here -->
+</div>
+
+<div class="well well-lg" id="EatRight">
+	<h4>Eat right</h4>
+	<p>
+	To lose weight, it's important to make lifestyle changes with a focus on reducing calories from food and beverages, a healthy eating plan, and portion control. This section will provide you with guidance and tools on how to eat right. Over time, these changes will become part of your everyday routine.</p>
+
+</div>
+
+<div class="well well-lg" id="BePhysicallyActive">
+
+	<h4>Be physically active</h4>
+	<p>Being physically active and eating fewer calories will help you lose weight and keep the weight off over time.<br>
+	While people vary quite a bit in the amount of physical activity they need for weight control, many can maintain their weight by doing 150 to 300 minutes (2 ½ to 5 hours) a week of moderate-intensity activity such as brisk walking.<br>
+	People who want to lose a large amount of weight (more than 5 percent of their body weight)—and people who want to keep off the weight that they’ve lost—may need to be physically active for more than 300 minutes of moderate-intensity activity each week.<br></p>
+
+	<h4>The benefits of maintaining a healthy weight include:<br></h4>
+	<ul>
+	<li>running from obese to healthy</li>
+	<li>An exercise plan can help you maintain a healthy BMI.</li>
+	<li>Fewer joint and muscle pains</li>
+	<li>Increased energy and ability to join in more activities</li>
+	<li>Improved regulation of bodily fluids and blood pressure</li>
+	<li>Reduced burden on the heart and circulatory system</li>
+	<li>Improved sleep patterns</li>
+	<li>Reductions in blood triglycerides, blood glucose, and risk of developing type 2 diabetes</li>
+	<li>Reduced risk for heart disease and certain cancers.</li>
+	</ul>
+	</p>
+</div>
+
+<div class="well-lg black">
+	<h4>Credits<h4>
+	<h5>Shikhara Akavaram<h5> 
+	<h6>B.Tech. CSE (2/4) Roll No 14251A0501<h6>
+	<h5>Srujana Reddy Chinakota<h5> 
+	<h6>B.Tech. CSE (2/4) Roll No 14251A0516<h6>
+</div>
+
+
+<script language="JavaScript">
+<!--
+
+$(function () {
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+	document.bmiForm.meaning.value = "";
+	document.bmiForm.bmi.value = ""
+  });      
+});
+
+function calculateBmi() {
+
+var finalBmi = 0
+var weightkgs = document.bmiForm.weightkgs.value
+var heightcms = document.bmiForm.heightcms.value
+
+var weightlbs = document.bmiForm.weightlbs.value
+var heightfeets = document.bmiForm.heightfeets.value
+var heightinches = document.bmiForm.heightinches.value
+
+var weightKgs1 = document.bmiForm.weightKgs1.value
+var heightfeets1 = document.bmiForm.heightfeets1.value
+var heightinches1 = document.bmiForm.heightinches1.value
+
+if(heightfeets1 > 0 && weightKgs1 > 0){	
+var weightlbs = (weightKgs1 * 2.20462)
+var height = (heightfeets1*12) + +heightinches1
+var finalBmi=(703*weightlbs)/(height*height)
+}
+
+
+if(heightfeets > 0 && heightinches >= 0){	
+var height = (heightfeets*12) + +heightinches
+}
+
+
+if(weightlbs > 0 && height > 0){	
+var finalBmi = (703*weightlbs)/(height*height)
+}
+
+if(weightkgs > 0 && heightcms > 0){	
+var finalBmi = weightkgs/(heightcms/100*heightcms/100)
+}
+
+if (finalBmi > 0) {
+document.bmiForm.bmi.value = Math.round(finalBmi)
+
+if(finalBmi < 18.5){
+document.bmiForm.meaning.value = "you are underweight"
+}
+if(finalBmi >=18.5 && finalBmi <=24.9){
+document.bmiForm.meaning.value = "you are perfect."
+}
+if(finalBmi >=25 && finalBmi<=29.9){
+document.bmiForm.meaning.value = "you are overweight."
+}
+if(finalBmi >=30){
+document.bmiForm.meaning.value = "you are obese."
+}
+}
+else{
+alert("Please Fill in everything correctly")
+}
+}
+//-->
+</script>
+
+
+
+
+
+</body>
+</html>
