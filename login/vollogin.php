@@ -1,6 +1,6 @@
 <?php 
 		$conn=mysql_connect("localhost","root","");
-		mysql_select_db("iandeye",$conn);
+		mysql_select_db("userlogin",$conn);
 		if(isset($_POST['sub']))
 		{
 			$user=($_POST['uname']);
@@ -9,23 +9,14 @@
 			if(mysql_fetch_array($res))
 			{
 				echo "<center>You Have Logged In Successfully</center>";
-
-
-			}
-			else
-			{
-					ob_start();
-					header('Location:data.php');
-					ob_end_flush();
-					die();			
-				
+				//add update page
 			}			
 		}		
 ?>	
 <html>
 <body bgcolor="skyblue">
-<h1 align="center">SCRIBE LOGIN</h1>
-<form action="usrreg.php" method="post">
+<h1 align="center">VOLUNTEER LOGIN</h1>
+<form action="login.php" method="post">
 <center>EnterName:<input type="text" name="uname"/></center><br>
 <center>Password:<input type="password" name="pwd"/></center><br>
 <center><input type="submit" name="sub" value="submit"/></center>

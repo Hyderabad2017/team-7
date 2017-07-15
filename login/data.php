@@ -8,6 +8,7 @@
 		mysql_select_db('sravani',$con);
 		if(isset($_POST['submit']))
 		{
+		
 			$name=($_POST['name']);
 			$pwd=($_POST['pwd']);
 			$conpwd=($_POST['conpwd']);
