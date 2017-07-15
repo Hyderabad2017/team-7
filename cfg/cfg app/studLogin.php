@@ -13,7 +13,7 @@ session_start();
 			if(mysql_fetch_array($res))
 			{
 				echo "<center>You Have Logged In Successfully</center>";
-				echo "$_SESSION['$user']"
+				$_SESSION['username'] = $user
 				//add update page
 			}
 		}
