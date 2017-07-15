@@ -113,4 +113,6 @@
 	</form>
 </body>-->
 
+   <input type="button" name="logout" value="logout"/>
+
 </html>-->
