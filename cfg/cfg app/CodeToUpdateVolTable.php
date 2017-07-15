@@ -1,6 +1,8 @@
-fuction ret()
+<?php
+
+fuction acceptrequest()
 {
-if(isset($_POST(retbtn)
+if(isset($_POST['retbtn'])
 {
 	$res= "'update table tablename set checked='1' where checked='0' and id='$res1(id)';
 	if(mysql_rows()!=0)
@@ -17,3 +19,4 @@ if(isset($_POST(retbtn)
 }
 
 }
+?>
