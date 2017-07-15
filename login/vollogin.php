@@ -5,26 +5,17 @@
 		{
 			$user=($_POST['uname']);
 			$pass=($_POST['pwd']);
-			$res=mysql_query("select *from loginpagedet where uname='$user' and pwd='$pass'");			
+			$res=mysql_query("select * from scribe where username='$user' and password='$pass'");			
 			if(mysql_fetch_array($res))
 			{
 				echo "<center>You Have Logged In Successfully</center>";
-
-
-			}
-			else
-			{
-					ob_start();
-					header('Location:data1.php');
-					ob_end_flush();
-					die();			
-				
+				//add update page
 			}			
 		}		
 ?>	
 <html>
 <body bgcolor="skyblue">
-<h1 align="center">USER VALIDATION</h1>
+<h1 align="center">VOLUNTEER LOGIN</h1>
 <form action="login.php" method="post">
 <center>EnterName:<input type="text" name="uname"/></center><br>
 <center>Password:<input type="password" name="pwd"/></center><br>
