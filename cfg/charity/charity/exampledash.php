@@ -3,37 +3,31 @@
 	include 'dbconfig/config.php';
 	try
 	{
-		if(isset($_POST['Search_btn']))
+		if(isset($_POST['sub']))
 		{
-			//$bloodgroup=$_POST['bloodgroup'];
-			$con = getdb(); 
-			$select = $con->prepare("SELECT * FROM donars WHERE username='$username' and datelastdonated<(current_date-90)");
-			$select->setFetchMode(PDO::FETCH_ASSOC);
-			$select->execute();
-			$data=$select->fetch();
+		
+		   include(retrieve.php);
 			if($select->rowCount()!=0)
 			{
 				//echo '<script type="text/javascript"> alert("Records found for the given criteria.. donars found")</script>';
 				echo '<table width="70%" broder="1" cellpadding="5" cellspacing="5">
 					<tr>
-						<th>firstname</th>
-						<th>lastname</th>
-						<th>gender</th>
-						<th>email</th>
-						<th>bloodgroup</th>
+						<th>Username</th>
+						<th>Firstname</th>
+						<th>LastName</th>
+						<th>Password</th>
 					</tr>';
 				foreach($select as $row)
 				{
 					echo '<tr>
-							<td>'.$row["firstname"].'</td>
-							<td>'.$row["lastname"].'</td>
-							<td>'.$row["gender"].'</td>
-							<td>'.$row["email"].'</td>
-							<td>'.$row["bloodgroup"].'</td>
+							<td>'.$row["Username"].'</td>
+							<td>'.$row["Firstname"].'</td>
+							<td>'.$row["LastName"].'</td>
+							<td>'.$row["Password"].'</td>
 						</tr>';
 				}
 		
-			//echo "<tr>"."<td>".$data['firstname']."</td>"."<td>".$data['lastname']."</td>"."<td>".$data['lastname']."</td>"."<td>".$data['bloodgroup']."</td>"."<td>".$data['email']."</td>"."<td>".$data['gender']."</td>"."<td>".$data['datelastdonated']."</td>"."</tr>";
+			//echo "<tr>"."<td>".$data[name']."</td>"."<td>".$data['lastname']."</td>"."<td>".$data['lastname']."</td>"."<td>".$data['bloodgroup']."</td>"."<td>".$data['email']."</td>"."<td>".$data['gender']."</td>"."<td>".$data['datelastdonated']."</td>"."</tr>";
 			}
 			
 			else
