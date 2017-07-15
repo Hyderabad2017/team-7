@@ -5,16 +5,21 @@
 <body bgcolor="FF5733">
 <?php 
 		$con=mysql_connect("localhost","root","");
-		mysql_select_db('sravani',$con);
-		if(isset($_POST['submit']))
+		mysql_select_db('iandeye',$con);
+		if(isset($_POST['update']))
 		{
 			$name=($_POST['name']);
-			$res=mysql_query("insert into info (name,pwd,conpwd,email,gender,city,state,country) values ('$name','$pwd','$conpwd','$email','$gender','$city','$state','$country')");
-			$res=mysql_query("select * from info");			
-			if(mysql_fetch_array($res))
-			{
-				echo "<h1>Data inserted successfully</h1>";
-			}
+			$email=($_POST['email']);
+			$contact=($_POST['contact']);
+			$altcont=($_POST['contact1']);
+			$dob=($_POST['dob']);
+			$qual=($_POST['qual']);
+			$gender=($_POST['gender']);
+			$city=($_POST['city']);
+			$state=($_POST['state']);
+			$street=($_POST['street']);
+			$res=mysql_query("insert into scribe (username,email,contact,alternatecontact,dob,gender,qualification,city,state,street) values ('$name','$email','$contact','$altcontact','$dob','$gender','$qual','$city','$state','$street')");
+	
 		}
 		mysql_close($con);
 		
@@ -30,8 +35,25 @@
             </tr>
             <tr>
                 <td><font size="5"color="cyan">Email ID:</td>
-                <td><input type="text" name="email"placeholder="abc@mail.com"></td>
+                <td><input type="text" name="email" placeholder="abc@mail.com"></td>
             </tr>
+			<tr>
+                <td><font size="5"color="cyan">Contact:</td>
+                <td><input type="number" name="contact"></td>
+            </tr>
+			<tr>
+                <td><font size="5"color="cyan">Alternate Contact</td>
+                <td><input type="number" name="contact1"></td>
+            </tr>
+			<tr>
+                <td><font size="5"color="cyan">DOB</td>
+                <td><input type="date" name="dob"></td>
+            </tr>
+			<tr>
+                <td><font size="5"color="cyan">Qualification:</td>
+                <td><input type="text" name="qual"></td>
+            </tr>
+
             <tr>
                 <td><font size="5"color="cyan">Gender:</td>
                 <td><font size="3" color="pink">Male:<input type="radio" value="male" name="gender" checked/>
@@ -59,14 +81,8 @@
                 </td>
             </tr>
             <tr>
-                <td><font size="5" color="cyan">Country:</td>
-                <td><select name="country">
-                   <option value=""selected>choose</option>
-                   <option value="NorthAmerica">NorthAmerica</option>
-                   <option value="Australia">Australia</option>
-                   <option value="UnitedKingdom">UnitedKingdom</option>
-                   <option value="India">India</option>
-                   <option value="Indonesia">Indonesia</option>
+                <td><font size="5" color="cyan">Streetname</td>
+                <td><input type="text" name="street"/>
                 </td>
             </tr>
             <tr>

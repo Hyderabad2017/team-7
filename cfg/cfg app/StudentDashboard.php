@@ -1,8 +1,12 @@
+
+
+<!DOCTYPE html>
 <html>
 <head>
-        <title>Update</title>
-</head>
-<body bgcolor="FF5733">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <?php 
 		$con=mysql_connect("localhost","root","");
 		mysql_select_db('iandeye',$con);
@@ -18,9 +22,55 @@
 		}
 		mysql_close($con);
 		
-?>
-        <center>
-		<font size="5" color="green">You have not registered in our website.. please register your details..!</font><br/>
+?>  
+  </head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6">
+				<form name="bmiForm" class="form-inline" role="form">
+					<div class="form-group">
+						<ul class="nav nav-tabs">
+							<li class="active"><a data-toggle="tab" href="#requestScribe">Request a Scribe</a></li>
+							<li><a data-toggle="tab" href="#updateProfile">Update profile</a></li>
+						</ul>
+
+						<div class="tab-content">
+							<div id="requestScribe" class="tab-pane fade in active">
+                <div class="container">
+                  <center>
+                    <form>
+                  		<h2><i>Request for scribe</i></h2>
+                      <div class="form-group">
+                        <label for="usr">Exam name</label>
+                        <input type="text" class="form-control" id="usr">
+                      </div>
+                  	<div class="form-group">
+                        <label for="usr">Medium</label>
+                        <input type="text" class="form-control" id="usr">
+                      </div>
+                  	<div class="form-group">
+                        <label for="usr">Qualification</label>
+                        <input type="text" class="form-control" id="usr">
+                      </div>
+                  	<div class="form-group">
+                        <label for="usr">Dateofexam</label>
+                        <input type="text" class="form-control" id="usr">
+                      </div>
+                  	<div class="form-group">
+                  	<button type="button" class="btn btn-primary">Request</button>
+                  	</div>
+
+                    </form>
+                  </center>
+                </div>
+							</div>
+
+							<div id="updateProfile" class="tab-pane fade">
+                <div class="container">
+                 <center>
+		<br/>
 		<h1><font color="yellow">Update Data</font></h1><br><br>
             <form method="POST">
                  <table>
@@ -73,5 +123,17 @@
                  </table>    
             </form>
         </center> 
+</body>
+</html>
+
+                </div>
+							</div>
+						</div>
+				</div>
+				</form>
+		</div>
+	</div>  <!-- Row Ends here -->
+</div>
+
 </body>
 </html>
