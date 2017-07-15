@@ -12,8 +12,8 @@
 			$fname=($_POST['firstname']);
 			$lname=($_POST['lastname']);
 			$pwd=($_POST['pwd']);
-			$res=mysql_query("insert into scribe (firstname,lastname,username,password) values ('$fname','$lname','$username','$pwd')");
-			$res=mysql_query("select * from scribe where username='$username' AND password='$pwd'");			
+			$res=mysql_query("insert into student (firstname,lastname,username,password) values ('$fname','$lname','$username','$pwd')");
+			$res=mysql_query("select * from student where username='$username' AND password='$pwd'");			
 			if(mysql_fetch_array($res))
 			{
 				echo "<h1>Data inserted successfully</h1>";
@@ -25,8 +25,8 @@
 ?>
         <center>
 		<font size="5" color="green">You have not registered in our website.. please register your details..!</font><br/>
-		<h1><font color="yellow">VOLUNTEER REGISTRATION</font></h1><br><br>
-            <form method="POST" action="volregister.php">
+		<h1><font color="yellow">STUDENT REGISTRATION</font></h1><br><br>
+            <form method="POST" action="studregister.php">
                  <table>
             <tr>
                 <td><font size="5"color="cyan">UserName:</td>

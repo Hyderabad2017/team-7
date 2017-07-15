@@ -1,6 +1,6 @@
 <?php 
 		$conn=mysql_connect("localhost","root","");
-		mysql_select_db("userlogin",$conn);
+		mysql_select_db("iandeye",$conn);
 		if(isset($_POST['sub']))
 		{
 			$user=($_POST['uname']);
@@ -16,7 +16,7 @@
 <html>
 <body bgcolor="skyblue">
 <h1 align="center">STUDENT LOGIN</h1>
-<form action="login.php" method="post">
+<form action="studlogin.php" method="post">
 <center>EnterName:<input type="text" name="uname"/></center><br>
 <center>Password:<input type="password" name="pwd"/></center><br>
 <center><input type="submit" name="sub" value="submit"/></center>
