@@ -122,9 +122,7 @@
             </tr>
                  </table>    
             </form>
-        </center> 
-</body>
-</html>
+        </center>
 
                 </div>
 							</div>
@@ -132,7 +130,7 @@
 				</div>
 				</form>
 		</div>
-	</div>  <!-- Row Ends here -->
+	</div>  
 </div>
 
 </body>
