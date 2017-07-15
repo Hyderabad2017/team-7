@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 
-=======
  <?php  
 						session_start();
 						echo $_SESSION['user'];
 						?>
->>>>>>> 551b6bf2c5171f4148a58b9e26ea2ef44e75087d
 
 <!DOCTYPE html>
 <html>
@@ -17,7 +14,7 @@
   <script>
   function viewRequest() {}
 </script>
-<<<<<<< HEAD
+
  <?php 
 		$con=mysql_connect("localhost","root","");
 		mysql_select_db('iandeye',$con);
@@ -39,8 +36,6 @@
 		mysql_close($con);
 		
 ?>
-=======
->>>>>>> 551b6bf2c5171f4148a58b9e26ea2ef44e75087d
 </head>
 <body>
 
@@ -51,15 +46,11 @@
 					<div class="form-group">
 						<ul class="nav nav-tabs">
 							<li class="active"><a data-toggle="tab" href="#requestScribe">Request a Scribe</a></li>
-<<<<<<< HEAD
-							<li><a data-toggle="tab" href="Updatevolu.php">Update profile</a></li>
-						</ul>
 
-=======
 							<li><a data-toggle="tab" href="#updateProfile">Update profile</a></li>
 						</ul>
 					
->>>>>>> 551b6bf2c5171f4148a58b9e26ea2ef44e75087d
+
 						<div class="tab-content">
 							<div id="requestScribe" class="tab-pane fade in active">
                 <div class="container">
@@ -93,8 +84,6 @@
 
 							<div id="updateProfile" class="tab-pane fade">
                 <div class="container">
-<<<<<<< HEAD
-
                  <center>
 		<font size="5" color="green">You have not registered in our website.. please register your details..!</font><br/>
 		<h1><font color="yellow">Update Data</font></h1><br><br>
@@ -163,26 +152,7 @@
             </form>
         </center>				
 				  </div>
-=======
-                  <center>
-                    <form>
-                  		<h2><i>Update Profile</i></h2>
-                      <div class="form-group">
-                        <label for="usr">Age</label>
-                        <input type="number" class="form-control" id="usr">
-                      </div>
-                      <br/>
-                  	<div class="form-group">
-                        <label for="usr">Qualification</label>
-                        <input type="text" class="form-control" id="usr">
-                      </div>
-                      <br/>
-                  	<button type="button" class="btn btn-primary">Update</button>
-                  	</div>
-                    </form>
-                  </center>
                 </div>
->>>>>>> 551b6bf2c5171f4148a58b9e26ea2ef44e75087d
 							</div>
 						</div>
 				</div>
