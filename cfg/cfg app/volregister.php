@@ -1,8 +1,13 @@
 <html>
 <head>
         <title>Registration</title>
-		session_start();
+		
 </head>
+<?php
+// Start the session
+session_start();
+?>
+
 <body bgcolor="FF5733">
 <?php 
 		$con=mysql_connect("localhost","root","");
