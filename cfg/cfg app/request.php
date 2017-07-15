@@ -17,15 +17,13 @@
 		mysql_select_db("iandeye",$conn);
 		if(isset($_POST['butn']))
 		{
-			
-			
 			echo "<table>
 					$res=mysql_query("select * from requests where qual=(select qualification from scribe where $_SESSION['$user'])");
 					while($row = mysql_fetch_array($result))
 					{
 						echo "<tr>";
 						$id = $row['id'];
-						echo "<button name="btn" value=.$row['examname'] onclick=info($id)>","</td>"
+						echo "<button name="btn"  onclick=info($id) data-toggle="modal" data-target="#myModal">".$row['examname']"</button></td>"
 						echo "</tr>"
 					}
 				</table>"	

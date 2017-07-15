@@ -64,7 +64,8 @@
                       <h4 class="modal-title">Modal Header</h4>
                     </div>
                     <div class="modal-body">
-                      <p>Some text in the modal.</p>
+                      <p><?php
+					  include(request.php)?></p>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-default">Ignore</button>
