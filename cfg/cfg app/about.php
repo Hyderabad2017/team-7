@@ -133,7 +133,54 @@ session_start();
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p>
 					</div>
 				</div>
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<!-- <ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+					<li data-target="#myCarousel" data-slide-to="3"></li>
+					<li data-target="#myCarousel" data-slide-to="4"></li>
+					<li data-target="#myCarousel" data-slide-to="5"></li>
+					<li data-target="#myCarousel" data-slide-to="6"></li>
+					<li data-target="#myCarousel" data-slide-to="7"></li>
+					<li data-target="#myCarousel" data-slide-to="8"></li>
+					<li data-target="#myCarousel" data-slide-to="9"></li>
+					</ol> -->
 
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<img  class="center-block" src="images/vinod.jpg" alt="bmi"  width="600" height="400">
+
+					</div>
+
+					<div class="item">
+						<img  class="center-block" src="images/pic1.jpg" alt="food"  width="600" height="400">
+
+
+					</div>
+
+					<div class="item">
+						<img  class="center-block" src="images/pic2.jpg" alt="heart" width="600" height="400">
+
+
+					</div>
+
+
+					<div class="item">
+						<img  class="center-block" src="images/pic3.jpg" alt="overweight" width="600" height="400">
+
+
+					</div>
+					<div class="item">
+						<img class="center-block"  src="images/pic4.jpg" alt="normalweight" width="600" height="400">
+
+
+					</div>
+					<div class="item">
+						<img class="center-block"  src="images/pic5.jpg" alt="obese" width="600" height="400">
+				</div>  <!-- My carousel Ends here -->
 			</div>
 		</div>
 
