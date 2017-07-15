@@ -1,4 +1,23 @@
-
+<?php
+// Start the session
+session_start();
+?>
+<?php
+		$conn=mysql_connect("localhost","root","");
+		mysql_select_db("iandeye",$conn);
+		if(isset($_POST['sub']))
+		{
+			$user=($_POST['uname']);
+			$pass=($_POST['pwd']);
+			$res=mysql_query("select * from student where username='$user' and password='$pass'");
+			if(mysql_fetch_array($res))
+			{
+				echo "<center>You Have Logged In Successfully</center>";
+				echo "$_SESSION['$username']";
+				//add update page
+			}
+		}
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -13,12 +32,12 @@
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
 	<meta name="author" content="FREEHTML5.CO" />
 
-  <!-- 
+  <!--
 	//////////////////////////////////////////////////////
 
-	FREE HTML5 TEMPLATE 
+	FREE HTML5 TEMPLATE
 	DESIGNED & DEVELOPED by FREEHTML5.CO
-		
+
 	Website: 		http://freehtml5.co/
 	Email: 			info@freehtml5.co
 	Twitter: 		http://twitter.com/fh5co
@@ -42,7 +61,7 @@
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
-	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -107,7 +126,7 @@
 				</div>
 			</div>
 		</header>
-		
+
 		<div class="fh5co-hero">
 			<div class="fh5co-overlay"></div>
 			<div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_2.jpg);">
@@ -119,7 +138,7 @@
 			</div>
 
 		</div>
-		
+
 		<div id="fh5co-feature-product" class="fh5co-section-gray">
 			<div class="container">
 				<div class="row">
@@ -161,11 +180,11 @@
 					</div>
 				</div>
 
-				
+
 			</div>
 		</div>
 
-		
+
 		<div id="fh5co-portfolio">
 			<div class="container">
 
@@ -176,7 +195,7 @@
 					</div>
 				</div>
 
-				
+
 				<div class="row row-bottom-padded-md">
 					<div class="col-md-12">
 						<ul id="fh5co-portfolio-list">
@@ -189,7 +208,7 @@
 									</div>
 								</a>
 							</li>
-						
+
 							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/cover_bg_3.jpg); ">
 								<a href="#" class="color-4">
 									<div class="case-studies-summary">
@@ -199,7 +218,7 @@
 								</a>
 							</li>
 
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/cover_bg_1.jpg); "> 
+							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/cover_bg_1.jpg); ">
 								<a href="#" class="color-5">
 									<div class="case-studies-summary">
 										<span>Give Love</span>
@@ -215,7 +234,7 @@
 									</div>
 								</a>
 							</li>
-						</ul>		
+						</ul>
 					</div>
 				</div>
 
@@ -225,12 +244,12 @@
 					</div>
 				</div>
 
-				
+
 			</div>
 		</div>
-		
 
-		
+
+
 		<div id="fh5co-content-section" class="fh5co-section-gray">
 			<div class="container">
 				<div class="row">
@@ -253,7 +272,7 @@
 								<p><span>Founder</span></p>
 								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 							</div>
-							
+
 							<p class="fh5co-social-icons">
 								<a href="#"><i class="icon-twitter2"></i></a>
 								<a href="#"><i class="icon-linkedin2"></i></a>
@@ -300,7 +319,7 @@
 		</div>
 		<!-- fh5co-content-section -->
 
-		
+
 		<footer>
 			<div id="footer">
 				<div class="container">
@@ -319,7 +338,7 @@
 				</div>
 			</div>
 		</footer>
-	
+
 
 	</div>
 	<!-- END fh5co-page -->
@@ -344,10 +363,9 @@
 	<!-- Superfish -->
 	<script src="js/hoverIntent.js"></script>
 	<script src="js/superfish.js"></script>
-	
+
 	<!-- Main JS -->
 	<script src="js/main.js"></script>
 
 	</body>
 </html>
-
