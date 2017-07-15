@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".update" />
-        <activity android:name=".updatestu"></activity>
+        <activity android:name=".updatestu" />
+        <activity android:name=".email"></activity>
     </application>
 
 </manifest>
