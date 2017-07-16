@@ -23,9 +23,10 @@
 					{
 						echo "<tr>";
 						$id = $row['id'];
-						echo "<button name="btn"  onclick=info($id) data-toggle="modal" data-target="#myModal">".$row['examname']"</button></td>"
+						echo "<button name="btn"  onclick=info($id) data-toggle="modal" data-target="#myModal">".$row['examname']."</button></td>"
 						echo "</tr>"
 					}
 				</table>"	
 		}		
 ?>
+</html>
