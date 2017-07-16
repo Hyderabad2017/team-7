@@ -20,11 +20,21 @@ session_start();
 ?>
 <html>
 <body bgcolor="skyblue">
+<div class="container">
 <h1 align="center">STUDENT LOGIN</h1>
+
 <form action="studLogin.php" method="post">
-<center>EnterName:<input type="text" name="uname"/></center><br>
-<center>Password:<input type="password" name="pwd"/></center><br>
-<center><input type="submit" name="sub" value="submit"/></center>
+<div class = "form-group">
+<center>EnterName:<input type="text" name="uname" class="form-control" /></center><br>
+</div>
+<div class = "form-group">
+<center>Password:<input type="password" name="pwd" class="form-control" /></center><br>
+</div>
+<div class = "form-group">
+<center><button type="submit" name="sub" class="btn btn-primary" >Submit</button></center>
+</div>
+
 </form>
+</div>
 </body>
 </html>

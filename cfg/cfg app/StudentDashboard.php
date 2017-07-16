@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<?php 
+<?php
 		$con=mysql_connect("localhost","root","");
 		mysql_select_db('iandeye',$con);
 		if(isset($_POST['update']))
@@ -21,8 +21,8 @@
 			$res=mysql_query("insert into student (username,contact,gender,city,state,street) values ('$name','$contact','$gender','$city','$state','$street')");
 		}
 		mysql_close($con);
-		
-?>  
+
+?>
   </head>
 <body>
 
@@ -71,31 +71,39 @@
                 <div class="container">
                  <center>
 		<br/>
-		<h1><font color="yellow">Update Data</font></h1><br><br>
+		<h1><font size = 5>Update Data</font></h1><br><br>
             <form method="POST">
                  <table>
             <tr>
-                <td><font size="5"color="cyan">UserName:</td>
-                <td><input type="text" name="name" placeholder="UserName"></td>
+              <div class = "form-group">
+                <td><font size="5">UserName:</td>
+                <td><input type="text" class="form-control" name="name" placeholder="UserName"></td>
+              </div>
             </tr>
             <tr>
-                <td><font size="5"color="cyan">Email ID:</td>
-                <td><input type="text" name="email" placeholder="abc@mail.com"></td>
+              <div class ="form-group">
+                <td><font size="5"color=>Email ID:</td>
+                <td><input type="text" class="form-control" name="email" placeholder="abc@mail.com"></td>
+              </div>
             </tr>
 			<tr>
-                <td><font size="5"color="cyan">Contact:</td>
-                <td><input type="number" name="contact"></td>
+        <div class = "form-group">
+                <td><font size="5"color=>Contact:</td>
+                <td><input type="number" class="form-control" name="contact"></td>
+              </div>
             </tr>
             <tr>
-                <td><font size="5"color="cyan">Gender:</td>
-                <td><font size="3" color="pink">Male:<input type="radio" value="male" name="gender" checked/>
-                       <font size="3" color="pink">Female:<input type="radio" value="female" name="gender">
+              <div class= "form-group">
+                <td><font size="5">Gender:</td>
+                <td><font size="3">Male:<input type="radio" value="male" name="gender" checked/>
+                       <font size="3">Female:<input type="radio" value="female" name="gender">
                 </td>
+              </div>
             </tr>
             <tr>
-                <td><font size="5" color="cyan">City:</td>
+                <td><font size="5">City:</td>
                 <td><select name="city">
-                   <option value="choose" selected>choose</option>    
+                   <option value="choose" selected>choose</option>
                    <option value="hyderabad">Hyderabad</option>
                    <option value="chennai">Chennai</option>
 					<option value="mumbai">Mumbai</option>
@@ -103,7 +111,7 @@
                 </td>
             </tr>
             <tr>
-                <td><font size="5" color="cyan">State:</td>
+                <td><font size="5">State:</td>
                 <td><select name="state">
                    <option value=""selected>choose</option>
                    <option value="AndhraPradesh">AndhraPradesh</option>
@@ -113,16 +121,21 @@
                 </td>
             </tr>
             <tr>
-                <td><font size="5" color="cyan">Streetname</td>
+                <td><font size="5">Streetname</td>
                 <td><input type="text" name="street"/>
                 </td>
             </tr>
             <tr>
-                <td><input type="Submit" value="Submit" name="update"></td>               
+                <td><input type="Submit" value="Submit" name="update"></td>
             </tr>
-                 </table>    
+                 </table>
             </form>
         </center>
+<<<<<<< HEAD
+</body>
+</html>
+=======
+>>>>>>> 620991ef04d9d991f52e4d1aeb576953c61fc588
 
                 </div>
 							</div>
