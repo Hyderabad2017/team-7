@@ -1,13 +1,19 @@
 
- <?php  
+<<<<<<< HEAD
+ <?php
+						session_start();
+						echo $_SESSION['user'];
+=======
+ <?php
 		session_start();
 		echo $_SESSION['user'];
 		include 'CodeToUpdateVolTable.php'
 ?>
 
-<?php  
+<?php
 	session_start();
 	echo $_SESSION['user'];
+>>>>>>> 620991ef04d9d991f52e4d1aeb576953c61fc588
 						?>
 
 
@@ -22,7 +28,7 @@
   function viewRequest() {}
 </script>
 
- <?php 
+ <?php
 		$con=mysql_connect("localhost","root","");
 		mysql_select_db('iandeye',$con);
 		if(isset($_POST['update']))
@@ -37,6 +43,7 @@
 			$city=($_POST['city']);
 			$state=($_POST['state']);
 			$street=($_POST['street']);
+
 			$uname = ($_SESSION['user']);
 			$res=mysql_query("update scribe set email='$email',contact=$contact,alternatecontact=$altcont,dob=$dob,qualification='$qual',
 			gender='$gender',city='$city',street='$street',state='$state' where username='$uname';");
@@ -47,7 +54,7 @@
 			}
 		}
 		mysql_close($con);
-		
+
 ?>
 </head>
 <body>
@@ -63,7 +70,7 @@
 
 							<li><a data-toggle="tab" href="#updateProfile">Update profile</a></li>
 						</ul>
-					
+
 
 						<div class="tab-content">
 							<div id="requestScribe" class="tab-pane fade in active">
@@ -103,45 +110,58 @@
 							<div id="updateProfile" class="tab-pane fade">
                 <div class="container">
                  <center>
-		<font size="5" color="green">You have not registered in our website.. please register your details..!</font><br/>
-		<h1><font color="yellow">Update Data</font></h1><br><br>
-            <form method="POST" name="update">
+		<font size="5">You have not registered in our website.. please register your details..!</font><br/>
+		<h1><font >Update Data</font></h1><br><br>
+            <form method="POST">
                  <table>
             <tr>
-                <td><font size="5"color="cyan">UserName:</td>
-                <td><input type="text" name="name" placeholder="UserName"></td>
+              <div class="form-group">
+                <td><font size="5">UserName:</td>
+                <td><input type="text" name="name" class="form-control"placeholder="UserName"></td>
+              </div>
             </tr>
             <tr>
-                <td><font size="5"color="cyan">Email ID:</td>
-                <td><input type="text" name="email" placeholder="abc@mail.com"></td>
+              <div class="form-group">
+                <td><font size="5">Email ID:</td>
+                <td><input type="text" name="email" placeholder="abc@mail.com" class="form-control"></td>
+              </div>
             </tr>
 			<tr>
-                <td><font size="5"color="cyan">Contact:</td>
-                <td><input type="number" name="contact"></td>
+        <div class = "form-group">
+                <td><font size="5">Contact:</td>
+                <td><input type="number" name="contact" class="form-control"></td>
+              </div>
             </tr>
 			<tr>
-                <td><font size="5"color="cyan">Alternate Contact</td>
-                <td><input type="number" name="contact1"></td>
+        <div class = "form-group">
+                <td><font size="5">Alternate Contact</td>
+                <td><input type="number" name="contact1" class="form-control"></td>
+              </div>
             </tr>
 			<tr>
-                <td><font size="5"color="cyan">DOB</td>
-                <td><input type="date" name="dob"></td>
+        <div class = "form-group">
+                <td><font size="5">DOB</td>
+                <td><input type="date" name="dob" class="form-control"></td>
+              </div>
             </tr>
 			<tr>
-                <td><font size="5"color="cyan">Qualification:</td>
-                <td><input type="text" name="qual"></td>
-            </tr>
+        <div class = "form-group">
+                <td><font size="5">Qualification:</td>
+                <td><input type="text" name="qual" class="form-control"></td>
+          </div>
+          </tr>
 
             <tr>
-                <td><font size="5"color="cyan">Gender:</td>
-                <td><font size="3" color="pink">Male:<input type="radio" value="male" name="gender" checked/>
-                       <font size="3" color="pink">Female:<input type="radio" value="female" name="gender">
+
+                <td><font size="5">Gender:</td>
+                <td><font size="3" >Male:<input type="radio" value="male" name="gender" checked/>
+                       <font size="3">Female:<input type="radio" value="female" name="gender">
                 </td>
             </tr>
             <tr>
-                <td><font size="5" color="cyan">City:</td>
+                <td><font size="5">City:</td>
                 <td><select name="city">
-                   <option value="choose" selected>choose</option>    
+                   <option value="choose" selected>choose</option>
                    <option value="hyderabad">Hyderabad</option>
                    <option value="chennai">Chennai</option>
 					<option value="mumbai">Mumbai</option>
@@ -149,7 +169,7 @@
                 </td>
             </tr>
             <tr>
-                <td><font size="5" color="cyan">State:</td>
+                <td><font size="5">State:</td>
                 <td><select name="state">
                    <option value=""selected>choose</option>
                    <option value="AndhraPradesh">AndhraPradesh</option>
@@ -159,16 +179,17 @@
                 </td>
             </tr>
             <tr>
-                <td><font size="5" color="cyan">Streetname</td>
+                <td><font size="5">Streetname</td>
                 <td><input type="text" name="street"/>
                 </td>
             </tr>
             <tr>
-                <td><input type="Submit" value="Submit"></td>               
+                <td><button type="Submit" class="btn btn-primary" name="update">Submit</button></td>
+
             </tr>
-                 </table>    
+                 </table>
             </form>
-        </center>				
+        </center>
 				  </div>
                 </div>
 							</div>
